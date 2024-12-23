@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+ <p id="result1">
+ <p id="result2"></p>
+ <script>
+    var myObj ={name:"Riya",age: 12,grade:7, };
+    var myJSON=JSON.stringify(myObj);//converts.object to JSON for sending data
+    var newObj=JSON.parse(myJSON);//converts JSON into object while receiving data
+    document.getElementById("result1").innerHTML = newObj.name;
+ </script>
+ <br>
+ <script>
+    async function add(a,b) {
+        let response=await a + b;
+        display(response);
+    }
+    function display(some){
+        document.getElementById("result2").innerHTML = some;
+    }
+    add(5, 20);
+ </script>
+</body>
+</html>
